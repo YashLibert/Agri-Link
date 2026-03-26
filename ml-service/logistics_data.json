@@ -1,0 +1,188 @@
+{
+  "export_ports": {
+    "nashik": {
+      "primary_port": "JNPT",
+      "port_full_name": "Jawaharlal Nehru Port Trust, Navi Mumbai",
+      "distance_km": 180,
+      "drive_hours": 4,
+      "cold_chain_available": true,
+      "apeda_office": "APEDA Regional Office, Mumbai — +91-22-26539074"
+    },
+    "aurangabad": {
+      "primary_port": "JNPT",
+      "port_full_name": "Jawaharlal Nehru Port Trust, Navi Mumbai",
+      "distance_km": 340,
+      "drive_hours": 6,
+      "cold_chain_available": true,
+      "apeda_office": "APEDA Regional Office, Mumbai — +91-22-26539074"
+    },
+    "pune": {
+      "primary_port": "JNPT",
+      "port_full_name": "Jawaharlal Nehru Port Trust, Navi Mumbai",
+      "distance_km": 140,
+      "drive_hours": 3,
+      "cold_chain_available": true,
+      "apeda_office": "APEDA Regional Office, Mumbai — +91-22-26539074"
+    },
+    "mumbai": {
+      "primary_port": "JNPT",
+      "port_full_name": "Jawaharlal Nehru Port Trust, Navi Mumbai",
+      "distance_km": 40,
+      "drive_hours": 1,
+      "cold_chain_available": true,
+      "apeda_office": "APEDA Regional Office, Mumbai — +91-22-26539074"
+    },
+    "nagpur": {
+      "primary_port": "JNPT",
+      "port_full_name": "Jawaharlal Nehru Port Trust, Navi Mumbai",
+      "distance_km": 900,
+      "drive_hours": 14,
+      "cold_chain_available": true,
+      "apeda_office": "APEDA Sub-Office, Nagpur — +91-712-2227830",
+      "alt_note": "Consider ICD Nagpur for container stuffing, then rail to JNPT"
+    }
+  },
+
+  "shipping_routes": {
+    "EU": {
+      "origin_port": "JNPT Mumbai",
+      "destination_ports": ["Rotterdam (Netherlands)", "Hamburg (Germany)", "Antwerp (Belgium)"],
+      "primary_shipping_lines": ["Maersk", "MSC", "CMA CGM", "Hapag-Lloyd"],
+      "transit_days": "22-28",
+      "frequency": "Weekly sailings",
+      "freight_cost_per_mt_inr": "18000-26000",
+      "container_type": "40ft Reefer for perishables",
+      "incoterm_typical": "FOB Mumbai"
+    },
+    "UK": {
+      "origin_port": "JNPT Mumbai",
+      "destination_ports": ["Felixstowe", "Southampton", "Tilbury (London)"],
+      "primary_shipping_lines": ["Maersk", "MSC", "ONE"],
+      "transit_days": "21-25",
+      "frequency": "Weekly sailings",
+      "freight_cost_per_mt_inr": "18000-24000",
+      "container_type": "40ft Reefer for perishables",
+      "incoterm_typical": "FOB Mumbai"
+    },
+    "USA": {
+      "origin_port": "JNPT Mumbai",
+      "destination_ports": ["Port of New York/New Jersey", "Port of Los Angeles"],
+      "primary_shipping_lines": ["Maersk", "Evergreen", "Yang Ming"],
+      "transit_days": "28-35",
+      "frequency": "Weekly sailings",
+      "freight_cost_per_mt_inr": "22000-32000",
+      "container_type": "40ft Reefer for perishables",
+      "incoterm_typical": "FOB Mumbai"
+    },
+    "UAE": {
+      "origin_port": "JNPT Mumbai",
+      "destination_ports": ["Jebel Ali Port, Dubai"],
+      "primary_shipping_lines": ["Maersk", "MSC", "DP World Logistics"],
+      "transit_days": "6-9",
+      "frequency": "2-3 sailings per week",
+      "freight_cost_per_mt_inr": "6000-10000",
+      "container_type": "40ft Reefer / Open truck for short transit",
+      "incoterm_typical": "FOB Mumbai",
+      "note": "Closest export market — lowest cost, fastest transit"
+    }
+  },
+
+  "destination_markets": {
+    "EU": {
+      "primary_wholesale_markets": [
+        { "name": "Rungis International Market", "city": "Paris, France", "note": "Largest wholesale market in Europe — handles most Indian agri imports via Rotterdam" },
+        { "name": "Mercabarna", "city": "Barcelona, Spain", "note": "Key for Spanish distribution" },
+        { "name": "Centrale del Latte", "city": "Milan, Italy", "note": "Northern Italy distribution hub" }
+      ],
+      "indian_diaspora_demand": "High — UK Indian community + European South Asian diaspora",
+      "peak_demand_months": "October–March (winter imports)"
+    },
+    "UK": {
+      "primary_wholesale_markets": [
+        { "name": "New Covent Garden Market", "city": "London", "note": "Primary landing market for Indian vegetables — onion, mango, chilli" },
+        { "name": "Birmingham Wholesale Market", "city": "Birmingham", "note": "Key for Midlands distribution — large South Asian diaspora" },
+        { "name": "Manchester Wholesale Market", "city": "Manchester", "note": "Northern England distribution" }
+      ],
+      "indian_diaspora_demand": "Very High — largest South Asian community in Europe",
+      "peak_demand_months": "Year-round with peaks Oct–Feb"
+    },
+    "USA": {
+      "primary_wholesale_markets": [
+        { "name": "Hunts Point Produce Market", "city": "New York / Bronx", "note": "Largest produce market in USA — primary entry for Indian exports" },
+        { "name": "LA Wholesale Produce Market", "city": "Los Angeles", "note": "West Coast entry point — large Indian-American community" },
+        { "name": "Chicago International Produce Market", "city": "Chicago", "note": "Midwest distribution hub" }
+      ],
+      "indian_diaspora_demand": "High — 4.4 million Indian-Americans concentrated in NY/NJ/CA/TX/IL",
+      "peak_demand_months": "Year-round"
+    },
+    "UAE": {
+      "primary_wholesale_markets": [
+        { "name": "Dubai Wholesale City (Fruit & Veg Market)", "city": "Dubai", "note": "Largest wholesale market in Middle East — re-exports to GCC countries" },
+        { "name": "Abu Dhabi Central Market", "city": "Abu Dhabi", "note": "Key for Abu Dhabi and Al Ain distribution" }
+      ],
+      "indian_diaspora_demand": "Very High — 3.5 million Indians in UAE, dominant food preference",
+      "peak_demand_months": "October–April (cooler months)"
+    }
+  },
+
+  "apeda_handlers": {
+    "maharashtra": [
+      {
+        "name": "Maharashtra State Agricultural Marketing Board (MSAMB)",
+        "contact": "+91-20-26051400",
+        "website": "msamb.com",
+        "crops": ["onion", "grape", "pomegranate", "mango", "tomato"],
+        "note": "Primary government handler — assists with APEDA registration and export documentation"
+      },
+      {
+        "name": "APEDA Registered Exporters — Mumbai",
+        "contact": "APEDA Mumbai: +91-22-26539074",
+        "website": "apeda.gov.in/apedawebsite/trade",
+        "crops": ["all"],
+        "note": "Full list available on APEDA website — filter by commodity and state"
+      },
+      {
+        "name": "Mahagrapes (Maharashtra Grape Growers Association)",
+        "contact": "+91-20-25536816",
+        "website": "mahagrapes.com",
+        "crops": ["grape"],
+        "note": "Specialized for Nashik grape exports — direct EU connections"
+      }
+    ]
+  },
+
+  "required_documents": {
+    "all_exports": [
+      "Phytosanitary Certificate (Plant Quarantine Authority of India)",
+      "APEDA Registration Certificate",
+      "Fumigation Certificate",
+      "Bill of Lading",
+      "Commercial Invoice",
+      "Packing List",
+      "Certificate of Origin"
+    ],
+    "EU_specific": [
+      "EU Pesticide Residue Test Report (NABL accredited lab)",
+      "EU Import Notification (TRACES system)"
+    ],
+    "UK_specific": [
+      "UK Phytosanitary Certificate",
+      "Pesticide Residue Test Report"
+    ],
+    "USA_specific": [
+      "FDA Prior Notice (minimum 8 hours before arrival)",
+      "USDA APHIS Import Permit (for certain commodities)"
+    ],
+    "UAE_specific": [
+      "Halal Certificate (if applicable)",
+      "Dubai Municipality Approval"
+    ]
+  },
+
+  "cold_chain_providers": [
+    { "name": "Snowman Logistics",     "coverage": "Pan India — Mumbai, Pune, Nashik",       "contact": "snowman.in" },
+    { "name": "Concor Air (CONCOR)",   "coverage": "ICD Nagpur to JNPT rail cold chain",      "contact": "concorindia.com" },
+    { "name": "Kausar India",          "coverage": "Mumbai cold storage and reefer transport", "contact": "kausarindia.com" },
+    { "name": "Coldstar Logistics",    "coverage": "Maharashtra — farm to port",               "contact": "coldstar.in" }
+  ]
+}

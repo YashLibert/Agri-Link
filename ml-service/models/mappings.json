@@ -1,0 +1,48 @@
+{
+  "crops": [
+    "Onion",
+    "Potato",
+    "Rice",
+    "Tomato",
+    "Wheat"
+  ],
+  "cities": [
+    "Mumbai",
+    "Nagpur",
+    "Nashik",
+    "Pune",
+    "Solapur"
+  ],
+  "target_crops": [
+    "Onion",
+    "Potato",
+    "Wheat",
+    "Tomato",
+    "Rice"
+  ],
+  "target_cities": [
+    "Pune",
+    "Nagpur",
+    "Nashik",
+    "Mumbai",
+    "Solapur"
+  ],
+  "market_to_city": {
+    "Pune": "Pune",
+    "Pune(Manjri)": "Pune",
+    "Pune(Moshi)": "Pune",
+    "Pune(Khadiki)": "Pune",
+    "Nagpur": "Nagpur",
+    "Nasik": "Nashik",
+    "Vashi New Mumbai": "Mumbai",
+    "Solapur": "Solapur"
+  },
+  "grade_map": {
+    "FAQ": 2,
+    "Large": 2,
+    "Medium": 1,
+    "Small": 0,
+    "Local": 1,
+    "Other": 1
+  }
+}

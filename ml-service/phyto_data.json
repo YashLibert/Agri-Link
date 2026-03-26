@@ -1,0 +1,118 @@
+{
+  "mrl_standards": {
+    "EU": {
+      "chlorpyrifos":     { "limit_mg_kg": 0.01, "status": "banned_2020", "note": "EU banned chlorpyrifos in 2020 — any detection is near-automatic rejection" },
+      "thiamethoxam":     { "limit_mg_kg": 0.01, "status": "restricted",  "note": "EU near-zero tolerance post neonicotinoid restrictions" },
+      "imidacloprid":     { "limit_mg_kg": 0.01, "status": "restricted",  "note": "Neonicotinoid — EU severely restricted since 2018" },
+      "cypermethrin":     { "limit_mg_kg": 0.05, "status": "active",      "note": "Low MRL — timing of last spray critical" },
+      "lambda_cyhalothrin":{ "limit_mg_kg": 0.02,"status": "active",      "note": "Strict EU limit — common in Maharashtra vegetable farming" },
+      "profenofos":       { "limit_mg_kg": 0.01, "status": "restricted",  "note": "Organophosphate — EU very strict" },
+      "mancozeb":         { "limit_mg_kg": 0.05, "status": "active",      "note": "Fungicide — moderate risk if PHI respected" },
+      "carbendazim":      { "limit_mg_kg": 0.1,  "status": "active",      "note": "Check PHI carefully for EU shipments" },
+      "acephate":         { "limit_mg_kg": 0.01, "status": "restricted",  "note": "EU near-zero — high rejection risk" },
+      "dimethoate":       { "limit_mg_kg": 0.01, "status": "banned",      "note": "EU banned — automatic rejection" },
+      "pomegranate":      { "limit_mg_kg": 0.01, "status": "restricted",  "note": "EU strict on pomegranate pesticides" },
+      "banana":           { "limit_mg_kg": 0.01, "status": "restricted",  "note": "EU very strict on banana exports" }
+    },
+    "UK": {
+      "chlorpyrifos":     { "limit_mg_kg": 0.01, "status": "banned",      "note": "UK retained EU ban post-Brexit" },
+      "thiamethoxam":     { "limit_mg_kg": 0.02, "status": "restricted",  "note": "Slightly more lenient than EU but still strict" },
+      "imidacloprid":     { "limit_mg_kg": 0.02, "status": "restricted",  "note": "UK retained neonicotinoid restrictions" },
+      "cypermethrin":     { "limit_mg_kg": 0.05, "status": "active",      "note": "Same as EU — PHI compliance critical" },
+      "lambda_cyhalothrin":{ "limit_mg_kg": 0.05,"status": "active",      "note": "UK slightly more lenient than EU" },
+      "profenofos":       { "limit_mg_kg": 0.02, "status": "active",      "note": "Moderate risk" },
+      "mancozeb":         { "limit_mg_kg": 0.1,  "status": "active",      "note": "Low risk if PHI respected" },
+      "carbendazim":      { "limit_mg_kg": 0.1,  "status": "active",      "note": "Acceptable with proper PHI" },
+      "acephate":         { "limit_mg_kg": 0.02, "status": "restricted",  "note": "Strict — get lab test before shipment" },
+      "dimethoate":       { "limit_mg_kg": 0.02, "status": "restricted",  "note": "Restricted — test before shipping" },
+      "pomegranate":      { "limit_mg_kg": 0.02, "status": "restricted",  "note": "UK follows EU standards closely" },
+      "banana":           { "limit_mg_kg": 0.02, "status": "restricted",  "note": "UK maintains strict import standards" }
+    },
+    "USA": {
+      "chlorpyrifos":     { "limit_mg_kg": 0.05, "status": "restricted",  "note": "EPA revoked food tolerances in 2021 — effectively banned on food crops" },
+      "thiamethoxam":     { "limit_mg_kg": 0.2,  "status": "active",      "note": "More lenient than EU — PHI compliance sufficient" },
+      "imidacloprid":     { "limit_mg_kg": 0.5,  "status": "active",      "note": "USA most lenient on neonicotinoids" },
+      "cypermethrin":     { "limit_mg_kg": 0.1,  "status": "active",      "note": "Reasonable limit — PHI compliance key" },
+      "lambda_cyhalothrin":{ "limit_mg_kg": 0.1, "status": "active",      "note": "Moderate risk — check crop-specific tolerance" },
+      "profenofos":       { "limit_mg_kg": 0.1,  "status": "active",      "note": "Moderate — test if sprayed within 3 weeks" },
+      "mancozeb":         { "limit_mg_kg": 5.0,  "status": "active",      "note": "USA very lenient on mancozeb" },
+      "carbendazim":      { "limit_mg_kg": 0.1,  "status": "active",      "note": "Acceptable" },
+      "acephate":         { "limit_mg_kg": 0.1,  "status": "active",      "note": "Moderate — check crop-specific" },
+      "dimethoate":       { "limit_mg_kg": 0.5,  "status": "active",      "note": "USA more lenient — PHI compliance sufficient" },
+      "pomegranate":      { "limit_mg_kg": 0.2,  "status": "active",      "note": "USA more lenient on pomegranate pesticides" },
+      "banana":           { "limit_mg_kg": 0.1,  "status": "active",      "note": "USA maintains moderate standards for bananas" }
+    },
+    "UAE": {
+      "chlorpyrifos":     { "limit_mg_kg": 0.1,  "status": "active",      "note": "UAE follows Codex Alimentarius — moderate standard" },
+      "thiamethoxam":     { "limit_mg_kg": 0.3,  "status": "active",      "note": "Codex standard — relatively lenient" },
+      "imidacloprid":     { "limit_mg_kg": 0.5,  "status": "active",      "note": "UAE lenient — good destination for Maharashtra produce" },
+      "cypermethrin":     { "limit_mg_kg": 0.2,  "status": "active",      "note": "Moderate — PHI compliance sufficient" },
+      "lambda_cyhalothrin":{ "limit_mg_kg": 0.2, "status": "active",      "note": "Low risk destination" },
+      "profenofos":       { "limit_mg_kg": 0.5,  "status": "active",      "note": "Lenient — good destination" },
+      "mancozeb":         { "limit_mg_kg": 5.0,  "status": "active",      "note": "Very lenient" },
+      "carbendazim":      { "limit_mg_kg": 0.5,  "status": "active",      "note": "Low risk" },
+      "acephate":         { "limit_mg_kg": 0.5,  "status": "active",      "note": "Low risk" },
+      "dimethoate":       { "limit_mg_kg": 1.0,  "status": "active",      "note": "UAE most lenient — low rejection risk" },
+      "pomegranate":      { "limit_mg_kg": 0.5,  "status": "active",      "note": "UAE follows Codex standards" },
+      "banana":           { "limit_mg_kg": 0.5,  "status": "active",      "note": "UAE maintains reasonable standards" }
+    }
+  },
+
+  "crop_pesticide_defaults": {
+    "onion": {
+      "common_pesticides": ["chlorpyrifos", "thiamethoxam", "profenofos", "mancozeb"],
+      "base_risk_note": "Onion from Nashik/Maharashtra — chlorpyrifos widely used for thrips control",
+      "phi_days": { "chlorpyrifos": 21, "thiamethoxam": 14, "profenofos": 14, "mancozeb": 7 }
+    },
+    "grape": {
+      "common_pesticides": ["imidacloprid", "lambda_cyhalothrin", "mancozeb", "carbendazim"],
+      "base_risk_note": "Nashik grapes — neonicotinoid usage common for mealy bug control",
+      "phi_days": { "imidacloprid": 21, "lambda_cyhalothrin": 14, "mancozeb": 7, "carbendazim": 14 }
+    },
+    "pomegranate": {
+      "common_pesticides": ["thiamethoxam", "imidacloprid", "cypermethrin", "profenofos"],
+      "base_risk_note": "Maharashtra pomegranate — aphid and fruit borer control common",
+      "phi_days": { "thiamethoxam": 14, "imidacloprid": 21, "cypermethrin": 7, "profenofos": 14 }
+    },
+    "mango": {
+      "common_pesticides": ["imidacloprid", "lambda_cyhalothrin", "carbendazim", "mancozeb"],
+      "base_risk_note": "Konkan/Marathwada mango — hoppers and anthracnose treatment common",
+      "phi_days": { "imidacloprid": 21, "lambda_cyhalothrin": 14, "carbendazim": 14, "mancozeb": 7 }
+    },
+    "tomato": {
+      "common_pesticides": ["chlorpyrifos", "acephate", "cypermethrin", "mancozeb"],
+      "base_risk_note": "Maharashtra tomato — high pesticide load typical due to disease pressure",
+      "phi_days": { "chlorpyrifos": 21, "acephate": 14, "cypermethrin": 7, "mancozeb": 7 }
+    },
+    "banana": {
+      "common_pesticides": ["imidacloprid", "chlorpyrifos", "mancozeb", "carbendazim"],
+      "base_risk_note": "Jalgaon banana — weevil and sigatoka treatment common",
+      "phi_days": { "imidacloprid": 21, "chlorpyrifos": 21, "mancozeb": 7, "carbendazim": 14 }
+    },
+    "chilli": {
+      "common_pesticides": ["acephate", "thiamethoxam", "lambda_cyhalothrin", "profenofos"],
+      "base_risk_note": "Vidarbha/Marathwada chilli — thrips and mite control intensive",
+      "phi_days": { "acephate": 14, "thiamethoxam": 14, "lambda_cyhalothrin": 7, "profenofos": 14 }
+    },
+    "soybean": {
+      "common_pesticides": ["imidacloprid", "chlorpyrifos", "lambda_cyhalothrin", "mancozeb"],
+      "base_risk_note": "Marathwada soybean — pest pressure requires multiple sprays",
+      "phi_days": { "imidacloprid": 21, "chlorpyrifos": 21, "lambda_cyhalothrin": 14, "mancozeb": 7 }
+    }
+  },
+
+  "phi_risk_multiplier": {
+    "description": "How days_since_last_spray vs required PHI affects residue risk",
+    "well_within":  { "threshold_pct": 150, "multiplier": 0.3, "label": "Well within PHI" },
+    "within":       { "threshold_pct": 100, "multiplier": 0.6, "label": "PHI met" },
+    "borderline":   { "threshold_pct": 70,  "multiplier": 1.2, "label": "Borderline — residue likely" },
+    "violated":     { "threshold_pct": 0,   "multiplier": 2.0, "label": "PHI violated — high residue risk" }
+  },
+
+  "lab_testing_bodies": [
+    { "name": "SGS India",           "location": "Pune / Mumbai",      "cost_inr": "4000-6000",  "turnaround_days": "3-5" },
+    { "name": "Bureau Veritas",      "location": "Mumbai",             "cost_inr": "4500-7000",  "turnaround_days": "4-6" },
+    { "name": "NABL Accredited Labs","location": "Nashik / Aurangabad","cost_inr": "2500-4000",  "turnaround_days": "5-7" },
+    { "name": "APEDA Empanelled Labs","location": "Pan Maharashtra",   "cost_inr": "3000-5000",  "turnaround_days": "4-6" }
+  ]
+}

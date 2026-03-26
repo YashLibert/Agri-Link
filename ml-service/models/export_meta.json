@@ -1,0 +1,55 @@
+{
+  "model_type": "XGBoost Regressor",
+  "target": "export_price_per_qt",
+  "description": "Predicts APEDA export price per quintal. Compare with domestic price to calculate export premium. Includes APEDA eligibility check.",
+  "features": [
+    "crop_enc",
+    "year",
+    "year_norm",
+    "era",
+    "log_qty",
+    "price_lag",
+    "growth_rate"
+  ],
+  "crops": [
+    "Grapes",
+    "Mango",
+    "Onion",
+    "Wheat"
+  ],
+  "years_covered": "1987 \u2014 2023 (APEDA data)",
+  "how_to_use": "Pass crop + domestic_price + qty_qt + grade. Model returns predicted export price and recommendation.",
+  "export_eligibility": {
+    "min_qty_qt": {
+      "Onion": 100,
+      "Grapes": 50,
+      "Mango": 30,
+      "Wheat": 200
+    },
+    "grade_required": "Grade A"
+  },
+  "recommendation_thresholds": {
+    "EXPORT": "premium >= 25%",
+    "CONSIDER EXPORT": "premium 10-25%",
+    "SELL DOMESTIC": "premium < 10%",
+    "NOT ELIGIBLE": "fails qty or grade check"
+  },
+  "results": {
+    "test_mae_rs": 314,
+    "test_r2": 0.9646,
+    "train_r2": 1.0,
+    "overfitting_gap": 0.0354,
+    "per_crop_mae": {
+      "Onion": 123,
+      "Grapes": 379,
+      "Wheat": 128,
+      "Mango": 591
+    }
+  },
+  "data_sources": {
+    "export": "APEDA via Agro Export Import India Dataset (Kaggle \u2014 karanshah21)",
+    "domestic": "AGMARKNET Daily Mandi Prices \u2014 Maharashtra 2023-2025"
+  },
+  "hackathon": "Pune Agri Hackathon 2026 \u2014 Theme 4",
+  "team": "Yash, Krishi Daspute, Jaya Jadhav, Vaishnavi Ghule, Pranjali Jadhav"
+}

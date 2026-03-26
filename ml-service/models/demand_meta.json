@@ -1,0 +1,75 @@
+{
+  "model_type": "XGBoost Classifier",
+  "objective": "multi:softmax",
+  "classes": {
+    "0": "LOW",
+    "1": "MEDIUM",
+    "2": "HIGH"
+  },
+  "features": [
+    "crop_enc",
+    "city_enc",
+    "month",
+    "year",
+    "day_of_year",
+    "weekday",
+    "quarter",
+    "season"
+  ],
+  "crops": [
+    "Onion",
+    "Potato",
+    "Tomato",
+    "Wheat"
+  ],
+  "cities": [
+    "Mumbai",
+    "Nagpur",
+    "Nashik",
+    "Pune",
+    "Solapur"
+  ],
+  "target_crops": [
+    "Onion",
+    "Potato",
+    "Wheat",
+    "Tomato"
+  ],
+  "target_cities": [
+    "Pune",
+    "Nagpur",
+    "Nashik",
+    "Mumbai",
+    "Solapur"
+  ],
+  "production_crops": [
+    "Onion",
+    "Potato",
+    "Tomato"
+  ],
+  "excluded_crops": {
+    "Wheat": "Insufficient samples (121) \u2014 excluded from production API"
+  },
+  "accuracy": 0.7615,
+  "per_crop_accuracy": {
+    "Onion": 82.3,
+    "Potato": 72.1,
+    "Tomato": 71.8,
+    "Wheat": 62.0
+  },
+  "label_logic": {
+    "HIGH": "Modal price >= 66th percentile of crop history",
+    "MEDIUM": "Modal price between 33rd and 66th percentile",
+    "LOW": "Modal price <= 33rd percentile of crop history"
+  },
+  "overfitting": {
+    "train_accuracy": 85.8,
+    "test_accuracy": 76.1,
+    "gap": 9.6,
+    "status": "Slight overfitting \u2014 acceptable"
+  },
+  "dataset": "AGMARKNET Daily Mandi Prices \u2014 Maharashtra 2023-2025",
+  "data_source": "data.gov.in / agmarknet.gov.in",
+  "hackathon": "Pune Agri Hackathon 2026 \u2014 Theme 4",
+  "team": "Yash, Krishi Daspute, Jaya Jadhav, Vaishnavi Ghule, Pranjali Jadhav"
+}
