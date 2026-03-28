@@ -3,33 +3,33 @@ import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const stats = [
-  { value: '₹90,000 Cr', label: 'Lost annually to post-harvest waste' },
-  { value: '86%',         label: 'Farmers are small & marginal' },
-  { value: '20–30%',      label: 'Price share reaching the farmer' },
-  { value: '3×',          label: 'Premium on APEDA-certified exports' },
+  { value: 'Rs. 90,000 Cr', label: 'Lost annually to post-harvest waste' },
+  { value: '86%', label: 'Farmers are small & marginal' },
+  { value: '20-30%', label: 'Price share reaching the farmer' },
+  { value: '3x', label: 'Premium on APEDA-certified exports' },
 ]
 
 const features = [
   {
-    icon: '◈',
+    icon: '*',
     title: 'AI Price Intelligence',
-    desc: 'XGBoost model trained on 36 years of AGMARKNET data predicts prices across 5 Maharashtra cities — 7 days in advance.',
-    tag: 'R² 0.898'
+    desc: 'XGBoost model trained on 36 years of AGMARKNET data predicts prices across 5 Maharashtra cities - 7 days in advance.',
+    tag: 'R^2 0.898'
   },
   {
-    icon: '◉',
+    icon: '+',
     title: 'Demand Forecasting',
     desc: 'Know if the market will be oversupplied before you harvest. Protect your income with data-backed selling decisions.',
     tag: '76% accuracy'
   },
   {
-    icon: '◎',
+    icon: 'o',
     title: 'Export Premium Advisor',
-    desc: 'Discover how much more you earn via APEDA export vs domestic sale. Real premium data from 1987–2023.',
+    desc: 'Discover how much more you earn via APEDA export vs domestic sale. Real premium data from 1987-2023.',
     tag: 'Unique feature'
   },
   {
-    icon: '◫',
+    icon: '#',
     title: 'Blockchain Traceability',
     desc: 'SHA-256 hash chain records every step farm to buyer. QR code per lot. APEDA-compliant audit trail.',
     tag: 'Tamper-proof'
@@ -39,21 +39,20 @@ const features = [
 const crops = ['Onion', 'Potato', 'Tomato', 'Wheat', 'Grapes', 'Mango']
 
 export default function LandingPage() {
-  const navigate    = useNavigate()
-  const heroRef     = useRef(null)
+  const navigate = useNavigate()
+  const heroRef = useRef(null)
   const [hoveredFeature, setHoveredFeature] = useState(null)
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ['start start', 'end start']
   })
-  const heroY     = useTransform(scrollYProgress, [0,1], ['0%', '30%'])
-  const heroOpacity = useTransform(scrollYProgress, [0,0.8], [1, 0])
+  const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
   return (
-    <div style={{ background: 'var(--cream)', overflow: 'hidden' }}>
-
-      {/* ── Navigation ── */}
+    <div style={{ background: 'var(--cream)', overflow: 'hidden', position: 'relative' }}>
+      {/* Navigation */}
       <motion.nav
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -70,7 +69,7 @@ export default function LandingPage() {
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <motion.div
-            animate={{ rotate: [0,5,-5,0] }}
+            animate={{ rotate: [0, 5, -5, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             style={{
               width: 36, height: 36,
@@ -87,15 +86,13 @@ export default function LandingPage() {
         </div>
 
         <div style={{ display: 'flex', gap: 12 }}>
-          <NavBtn onClick={() => navigate('/login')}  outline>Sign in</NavBtn>
+          <NavBtn onClick={() => navigate('/login')} outline>Sign in</NavBtn>
           <NavBtn onClick={() => navigate('/register')} filled>Get started</NavBtn>
         </div>
       </motion.nav>
 
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section ref={heroRef} style={{ minHeight: '100vh', position: 'relative', display: 'flex', alignItems: 'center' }}>
-
-        {/* Background geometric pattern */}
         <div style={{
           position: 'absolute', inset: 0,
           backgroundImage: `
@@ -105,7 +102,6 @@ export default function LandingPage() {
           zIndex: 0
         }} />
 
-        {/* Animated leaf shapes */}
         {[...Array(6)].map((_, i) => (
           <motion.div key={i}
             animate={{
@@ -135,8 +131,6 @@ export default function LandingPage() {
 
         <motion.div style={{ y: heroY, opacity: heroOpacity, width: '100%', position: 'relative', zIndex: 1 }}>
           <div style={{ maxWidth: 1200, margin: '0 auto', padding: '120px 48px 80px' }}>
-
-            {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -151,15 +145,14 @@ export default function LandingPage() {
             >
               <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--leaf)', display: 'inline-block' }} />
               <span style={{ fontSize: 13, color: 'var(--forest-mid)', fontWeight: 500, letterSpacing: '0.04em' }}>
-                Pune Agri Hackathon 2026 · Theme 4
+                Pune Agri Hackathon 2026 | Theme 4
               </span>
             </motion.div>
 
-            {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45, duration: 0.8, ease: [0.22,1,0.36,1] }}
+              transition={{ delay: 0.45, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               style={{
                 fontFamily: 'var(--font-display)',
                 fontSize: 'clamp(48px, 7vw, 88px)',
@@ -207,10 +200,9 @@ export default function LandingPage() {
               }}
             >
               AI-powered price prediction, demand forecasting, export premium advisory
-              and blockchain traceability — built for Maharashtra's 146 million farmers.
+              and blockchain traceability - built for Maharashtra's 146 million farmers.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -218,14 +210,13 @@ export default function LandingPage() {
               style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}
             >
               <HeroBtn primary onClick={() => navigate('/register')}>
-                Start for free →
+                Start for free -&gt;
               </HeroBtn>
               <HeroBtn onClick={() => navigate('/login')}>
                 Sign in
               </HeroBtn>
             </motion.div>
 
-            {/* Crop tags */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -254,7 +245,7 @@ export default function LandingPage() {
         </motion.div>
       </section>
 
-      {/* ── Stats bar ── */}
+      {/* Stats bar */}
       <section style={{
         background: 'var(--forest)',
         padding: '48px 0',
@@ -289,7 +280,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── Features ── */}
+      {/* Features */}
       <section style={{ maxWidth: 1200, margin: '0 auto', padding: '100px 48px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -360,7 +351,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ── CTA Section ── */}
+      {/* CTA Section */}
       <section style={{
         background: 'var(--forest)',
         margin: '0 48px 100px',
@@ -404,7 +395,7 @@ export default function LandingPage() {
             fontSize: 18, color: 'rgba(149,213,178,0.8)',
             maxWidth: 500, margin: '0 auto 40px', lineHeight: 1.7
           }}>
-            Join AgriLink — connect directly to buyers, eliminate middlemen, and access
+            Join AgriLink - connect directly to buyers, eliminate middlemen, and access
             AI-powered market intelligence built for Maharashtra's agricultural ecosystem.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -436,7 +427,7 @@ export default function LandingPage() {
         </motion.div>
       </section>
 
-      {/* ── Footer ── */}
+      {/* Footer */}
       <footer style={{
         borderTop: '1px solid rgba(27,67,50,0.1)',
         padding: '32px 48px',
@@ -445,7 +436,7 @@ export default function LandingPage() {
       }}>
         <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, color: 'var(--forest)', fontSize: 18 }}>AgriLink</span>
         <span style={{ fontSize: 13, color: 'var(--text-muted)' }}>
-          Pune Agri Hackathon 2026 · Team AeroNexis · 
+          Pune Agri Hackathon 2026 | Team AeroNexis |
         </span>
       </footer>
     </div>
